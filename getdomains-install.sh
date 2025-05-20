@@ -320,7 +320,7 @@ dnsmasqfull() {
     else
         printf "\033[32;1mInstalled dnsmasq-full\033[0m\n"
         cd /tmp/ && apk fetch dnsmasq-full
-        apk del dnsmasq && apk add dnsmasq-full --cache /tmp/
+        apk del dnsmasq && apk add dnsmasq-full --cache-dir /tmp/
 
         [ -f /etc/config/dhcp.apk-new ] && cp /etc/config/dhcp /etc/config/dhcp-old && mv /etc/config/dhcp.apk-new /etc/config/dhcp
     fi
